@@ -81,6 +81,18 @@
             else
                 nameError.textContent = "Invalid Name ";
         });
+
+        //uc-2 email validation
+        const email = document.querySelector("#email");
+        const emailError = document.querySelector(".email-error");
+        email.addEventListener('input', function () {
+            let emailRegex = RegExp('^[a-zA-Z0-9]+[._+-]{0,1}[a-zA-Z0-9]*@[a-zA-Z0-9]{1,10}.[a-zA-Z]{2,10}[.]*[a-zA-Z]*$');
+            if (emailRegex.test(email.value))
+                emailError.textContent = "";
+            else
+                emailError.textContent = "Invalid Email";
+        });
+
     </script>
 </body>
 
